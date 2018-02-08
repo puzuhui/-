@@ -106,9 +106,9 @@ public class UserServiceImp implements UserService {
 	 * 微信支付
 	 */
 	// 商户相关资料
-	static String appid = "wxa08821893494a1a5";
-	static String partner = "1496565902";// 商户号
-	static String partnerkey = "oPn5vuUgX5bwCRmJTPJZCLgfFo5HaLCV";
+	static String appid = "";
+	static String partner = "";// 商户号
+	static String partnerkey = "";//商户秘钥
 	static String UNIFIED_ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 	@Override
 	public Map<String, Object> wechatpay(String body,String out_trade_no,int total_fee,String spbill_create_ip) {
@@ -484,13 +484,13 @@ public class UserServiceImp implements UserService {
 	 * 支付宝支付
 	 */
 	//商户号
-	public static String alipartner = "2088801141585777";  
+	public static String alipartner = "";  
 	//商户的私钥
-	public static String private_key = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCEqU85LIXINzxJXgaTYBuH6ijhdwUjp38J8jUazQ9H5ww2kYsfA2wGP64nH+eGXg/y3r12dCB0RD0cPluQK8Iuiob1/6pwlNVYici6WTQyHTVqfpqqK1E5ptwDROtCbNQn30wlkp85PsCb8Cjbz4scD03cq9LDuDS6h3S86ahOg5N63i1TyV+zk+f0QVpkrnvjIIOz4tz/iW5pNZqEYyTETByVZqgJRni3pDtzNV1BNiuymqZnrdnqPQ6i820/zU/NBZUJQzSnkf+jLYGsopTUFjBfUMILD0rGtL362m68cdsmOVfQ12RBzvfSlqTzjMvr6czmWM6088EOc6bRsE87AgMBAAECggEARSW7FaIPWXzw/4zzAH5n20BCbsMK+rqjjRuicoXQITpdM1RJn7C47cjjjaEjnPYKeh1/w+5jvDaVY9NdBpjIblnmXvMUc/of+jZXWkqE2lo/LXMwSuKpQ9Olek7CEa2IKABMQIlcVQpQeveDVI+pgsa3Xv5wrXOmiFNylcV05PcPS9YEFg+mSXYCVHEqRqGdroBLuJzdT3lJFoafK5PjdsCFkbzc1XZoUZS5OWz/NlAgaGDnq2p03Dw1khjYWHHoIS9MiPzy8zGuheQDNG5HFzwChd+bpg3NuN26m9zDy5WMzLLWgGMMGhHmwwg/z/Df2TJC3qt90sMwyh3tnS0cgQKBgQDJ/njYlhRJO5kqEpdF78eFbWX6Axy9gvj0Q2Mk4Cpcz9u9EVtBt4oUYbS6oheZFo6lGJAED8baliNf9j+PZgsTKaRjU6m9voyzxZyKAW+huvBNrvl4Dyl6JFQzQ0tPxgzSKhJBGsKNXUCMJ1ZiLeY1HhklrgtSbd+A/22otlZifwKBgQCoIVjcgSBuaWDu9vtEHvXMfeW/V3/QQYVhsDI41R7jdBv8k36FPNkQ8OBvFaf0GrY5UX0GQL6WPYzHY1TxRAnvwUzydOYddYQk9YdOiZ04XN8wA6jvDXP+3j6VE7Y2hX4nEIobe7xBRXSibd3L4i7slNf/OWTkuqlEZT7j4lC9RQKBgAs3RRCJrNCwLX4HkDzC5qpC+9GZEKR5PEeb4kpu5AtJQ2NJLm8EuPcOwdFHJNZMSVljdsOy+JC0m3w9mSPmP6Etw8H8KEWv6fIle96x27f4QFWf7Jw9A0mT8NTz3J+uWJHm4iKZUMo2rlnZ6VMER28Vn8HW2ywVi76G8FjY3w0TAoGALRHDYFi8+NwGwAg1Eu25tjeJfuFVwd3Og4FX9SQsQ4y8c9iV8eF9zqzDfQOxIh6G+pZ9jU+Nx3h4ZHqcKpCymTKYDeaISR1XbxDiVItPOeyrZ5OTlYFltsycuhmunq7qQk6MtxFURar4uRH6gsz/ByxfOmuIQEhJV6xMT4o7WoECgYEAxGB3Zjekk3vlMPfHaL85WSIAxTmEiyI0Tv6DTTzyaK7JpjcXxzKL9ttspTSUaI7cAmjhzMdojt/XjqZ1OV3IOyTJ5BiEe2FGrm41f27d3qJrUYI3VpTpmkPhebMfQTubPuXSiDvAidOWLPTVp6QYdDbQpjEbsZmOBd3BVzLAexY=";  
+	public static String private_key = "";  
 	//支付宝公钥
-	public static String alipay_public_key ="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjmPxRS7D7NzfRkAyNiXurTQWv70MonMwHafgG8TwiVPaKdiRe/VvIJbO7Bva9RdEtCpKJYsz5y+iwRXDnvVIxdcq1+kuju0D/KlfoHF7UL9GI3OxTWlXyOVecfBrLeJpIlf05U39fJYvSASiaf+DdcjsktaCD/9py9SbgkPMoqFIq721W712UvB/13UD6wADKa6rXSrUx+32JHSzSz+78bjNb3bKjWLEnGGKVGXBwgl2hkTgvQyA90N7n0K0WtQtaXm/Qvr7/8FXmDv9bxp+k+ajurnebuVsqJzujn/2wlQSBluMyRS3OeE3WFYqIzH+4MGFNYA2NCyyVanJNZ7jUwIDAQAB";
+	public static String alipay_public_key ="";
 	//APPID  
-    public static String app_id="2017120600411624";  
+    public static String app_id="";  
     //notify_url  
     public static String notify_url="http://192.168.188.122:8080/huaji/ws/user/alipaynotify";  
 	@Override
